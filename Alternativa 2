@@ -1,0 +1,30 @@
+import math
+
+def enesimoprimo(n):
+    """
+    Calcular el enésimo número primo
+    
+    Args:
+        n: La posición de número primo que busco
+    
+    Returns:
+        El enésimo número primo
+    """
+    primo = 2
+    contador = 1
+    
+    while contador < n:
+        primo += 1
+        numprimo = True
+        
+        for i in range(2, int(math.sqrt(primo)) + 1):
+            if primo % i == 0:
+                numprimo = False
+                break
+                
+        if numprimo== True:
+            contador += 1
+
+    return primo
+
+print(enesimoprimo(1000000))
