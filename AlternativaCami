@@ -1,4 +1,5 @@
 import math
+import time
 
 def enesimoprimo(n):
     """
@@ -26,5 +27,11 @@ def enesimoprimo(n):
             contador += 1
 
     return primo
+n = 1000
+inicio = time.time()  # Tomar el tiempo de inicio
+resultado = enesimoprimo(n)  # Ejecutar la función
+fin = time.time()  # Tomar el tiempo al finalizar
 
-print(enesimoprimo(1000000))
+# Mostrar el resultado y el tiempo que tardó
+print(f"El {n}-ésimo primo es: {resultado}")
+print(f"Tiempo de ejecución: {fin - inicio:.4f} segundos")
