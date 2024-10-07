@@ -5,7 +5,7 @@ def mi_funcion(parametro1, parametro2):
     # Implementa la lógica de la función
     resultado = parametro1 + parametro2
     return resultado
-list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+list1 = [3]
 contador = 0
 print("Mi primera función es para realizar sumas.")
 while contador < 10:

@@ -1,0 +1,37 @@
+import math
+import time
+
+def enesimoprimo(n):
+    """
+    Calcular el enésimo número primo
+    
+    Args:
+        n: La posición de número primo que busco
+    
+    Returns:
+        El enésimo número primo
+    """
+    primo = 2
+    contador = 1
+    
+    while contador < n:
+        primo += 1
+        numprimo = True
+        
+        for i in range(2, int(math.sqrt(primo)) + 1):
+            if primo % i == 0:
+                numprimo = False
+                break
+                
+        if numprimo== True:
+            contador += 1
+
+    return primo
+n = 1000000
+inicio = time.time()  
+resultado = enesimoprimo(n)  
+fin = time.time() 
+
+# Resultado
+print(f"El {n}-ésimo primo es: {resultado}")
+print(f"Tiempo de ejecución: {fin - inicio:.4f} segundos")
